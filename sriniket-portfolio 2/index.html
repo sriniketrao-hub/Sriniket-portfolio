@@ -91,7 +91,7 @@
     </div>
 
     <div class="case-grid-new">
-      <div class="case-card featured">
+      <div class="case-card featured" data-case="0" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="art" style="background-image:url(images/case-01-the-yard.jpg)"></div>
         <div class="scrim"></div>
         <div class="content">
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="case-card">
+      <div class="case-card" data-case="1" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="art" style="background-image:url(images/case-02-groww-htmi.jpg)"></div>
         <div class="scrim"></div>
         <div class="content">
@@ -115,7 +115,7 @@
           </div>
         </div>
       </div>
-      <div class="case-card">
+      <div class="case-card" data-case="2" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="art" style="background-image:url(images/case-03-groww-rupeenomics.jpg)"></div>
         <div class="scrim"></div>
         <div class="content">
@@ -127,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="case-card">
+      <div class="case-card" data-case="3" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="art" style="background-image:url(images/case-04-ashish-rajan.jpg)"></div>
         <div class="scrim"></div>
         <div class="content">
@@ -152,23 +152,26 @@
 
     <div class="writing-block">
       <div class="deck-lead">
-        <div class="deck-screen">
-          <div class="ph" id="deckPh">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
-            <div class="hint">No tape loaded</div>
+        <div class="deck-col">
+          <div class="deck-screen">
+            <div class="ph" id="deckPh">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+              <div class="hint">No tape loaded</div>
+            </div>
           </div>
+          <div class="deck-meta" id="deckMeta"></div>
         </div>
         <div class="tape-rack">
           <div class="tape-rack-label">Tape rack</div>
-          <div class="tape" onclick="loadTape(this,'Rupeenomics — Groww','How This Team Beat The Curse')">
+          <div class="tape" onclick="loadTape(this,0)">
             <div class="reels"><span class="reel"></span><span class="reel"></span></div>
             <div><div class="tt">Rupeenomics — Groww</div><div class="ttl">How This Team Beat The Curse</div></div>
           </div>
-          <div class="tape" onclick="loadTape(this,'Interiors Made Easy — HomeLane','Transformation Script | Himaja')">
+          <div class="tape" onclick="loadTape(this,1)">
             <div class="reels"><span class="reel"></span><span class="reel"></span></div>
             <div><div class="tt">Interiors Made Easy — HomeLane</div><div class="ttl">Transformation Script | Himaja</div></div>
           </div>
-          <div class="tape" onclick="loadTape(this,'Unbox Health','Vitamin D')">
+          <div class="tape" onclick="loadTape(this,2)">
             <div class="reels"><span class="reel"></span><span class="reel"></span></div>
             <div><div class="tt">Unbox Health</div><div class="ttl">Vitamin D</div></div>
           </div>
@@ -184,10 +187,13 @@
 
         <div class="writing-secondary-label">The Yard, Bangalore — top-performing reels</div>
         <div class="yard-grid">
-          <div class="thumb-card"><img src="images/yard-reel-01.jpg" alt=""><div class="scrim2"></div><div class="idx">REEL 01</div></div>
-          <div class="thumb-card"><img src="images/yard-reel-02.jpg" alt=""><div class="scrim2"></div><div class="idx">REEL 02</div></div>
-          <div class="thumb-card"><img src="images/yard-reel-03.jpg" alt=""><div class="scrim2"></div><div class="idx">REEL 03</div></div>
-          <div class="thumb-card linkout"><a href="#">↗<br>4 more reels<br>on Instagram</a></div>
+          <div class="thumb-card" role="button" tabindex="0" onclick="openReel('DYo5G-APnnT')"><img src="images/yard-reel-01.jpg" alt="Gen-Z when manager scolds"><div class="scrim2"></div><div class="idx">REEL 01</div></div>
+          <div class="thumb-card" role="button" tabindex="0" onclick="openReel('Dah4OMRPNl0')"><img src="images/yard-reel-02.jpg" alt="Working in 2026 be like"><div class="scrim2"></div><div class="idx">REEL 02</div></div>
+          <div class="thumb-card" role="button" tabindex="0" onclick="openReel('DbDbkM6vnVF')"><img src="images/yard-reel-03.jpg" alt="3 hours of sleep doesn't affect me at all"><div class="scrim2"></div><div class="idx">REEL 03</div></div>
+          <div class="thumb-card considered" role="button" tabindex="0" onclick="openReel('DZUlVm_tqM1')"><div class="idx">REEL 04</div></div>
+          <div class="thumb-card considered" role="button" tabindex="0" onclick="openReel('DYwlkV1vfyk')"><div class="idx">REEL 05</div></div>
+          <div class="thumb-card considered" role="button" tabindex="0" onclick="openReel('DakqadCvq_z')"><div class="idx">REEL 06</div></div>
+          <div class="thumb-card considered" role="button" tabindex="0" onclick="openReel('DbF-XEdP8j0')"><div class="idx">REEL 07</div></div>
         </div>
       </div>
     </div>
@@ -229,6 +235,22 @@
 
 <footer>Sriniket Bandaru — Content Strategist, Bengaluru</footer>
 
+<div class="modal-backdrop" id="caseModal" aria-hidden="true">
+  <div class="modal-panel case-modal-panel" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle">
+    <button class="modal-close" type="button" onclick="closeCaseModal()" aria-label="Close">&times;</button>
+    <div id="caseModalBody"><!-- populated by js/main.js --></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="lightbox" aria-hidden="true">
+  <div class="modal-panel lightbox-panel" role="dialog" aria-modal="true" aria-label="Reel player">
+    <button class="modal-close" type="button" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <div class="lightbox-frame" id="lightboxFrame"><!-- iframe injected by js/main.js --></div>
+    <a class="lightbox-fallback" id="lightboxFallback" href="#" target="_blank" rel="noopener">Open on Instagram ↗</a>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
